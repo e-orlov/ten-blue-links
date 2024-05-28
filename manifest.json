@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "10-blue-links",
+  "version": "1.0",
+  "description": "Vintage SERP",
+  "icons": {
+    "128": "icon.png"
+  },
+  "permissions": [
+    "tabs",
+    "*://*.google.com/*",
+    "*://*.google.de/*",
+    "*://*.google.*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.google.com/*",
+        "*://*.google.de/*",
+        "*://*.google.*/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
